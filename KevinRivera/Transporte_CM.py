@@ -1,3 +1,7 @@
+#Solo problemas de minimizacion
+#No funciona si en el pivoteo el ciclo es de mas de 4
+
+
 import numpy as np
 
 frt = int(input("Inserte el numero de nodos de oferta: "))
@@ -251,9 +255,3 @@ while(stop == False):
         print()
         print("Z = ",z)
         print()
-
-
-        
-
-    #    if(a[3][kk,ll] != 1):
-
