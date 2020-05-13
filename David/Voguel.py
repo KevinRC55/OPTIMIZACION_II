@@ -51,6 +51,7 @@ elif dt==ot:
 
 index=0
 CCostos=Costos.copy()
+"Asignación de Valores por Vogel"
 while(index<(x*y)):
     minf2=np.zeros((x,1))
     minf1=np.zeros((x,1))
@@ -155,6 +156,7 @@ print(Valores)
 
 Optimo=0
 
+"Calculo de precios sombras y pivoteo hasta el óptimo"
 while(Optimo!=1):
     u=[None]*len(Costos)
     v=[None]*len(Costos[0])
@@ -188,20 +190,16 @@ while(Optimo!=1):
                     continue
                 if u[i] is None and Valores[i,j]!=0:
                     u[i]=Costos[i,j]-v[j]
-                    print(u[i])
-                elif v[j] is None and Valores[i,j!=0]:
+                elif v[j] is None and Valores[i,j]!=0:
                     v[j]=Costos[i,j]-u[i]
-                    print(v[j])
         for i in range(x+1):
             for j in range(y):
                 if u[i] is None and v[j] is None:
                     continue
                 if u[i] is None and Valores[i,j]!=0:
                     u[i]=Costos[i,j]-v[j]
-                    print(u[i])
-                elif v[j] is None and Valores[i,j!=0]:
+                elif v[j] is None and Valores[i,j]!=0:
                     v[j]=Costos[i,j]-u[i]
-                    print(v[j])
         for i in range(x+1):
             for j in range(y):
                 PSombras[i,j]=u[i]+v[j]-Costos[i,j]
@@ -242,24 +240,63 @@ while(Optimo!=1):
 
     if(P>0):
         print("La solución no es óptima.")
-        for i in range(x):
-            for j in range(y+1):
-                if(PSombras[i,j]==P):
-                    Px1=i
-                    Py1=j
-                    Px2=i
+        if(C==1):
+            for i in range(x):
+                for j in range(y+1):
+                    if(PSombras[i,j]==P):
+                        Px1=i
+                        Py1=j
+                        Px2=i
 
-        for j in range(y+1):
-            if (Valores[Px1,j]!=0 and j!=Py1):
-                Py2=j
-                for i in range(x):
-                    if i!=Px1:
-                        if (Valores[i,Py1]!=0 and Valores[i,Py2]!=0):
-                                Nv=min(Valores[Px2,Py2],Valores[i,Py1])
-                                Valores[Px1,Py1]=Nv
-                                Valores[Px2,Py2]=Valores[Px2,Py2]-Nv
-                                Valores[i,Py1]=Valores[i,Py1]-Nv
-                                Valores[i,Py2]=Valores[i,Py2]+Nv
+            for j in range(y+1):
+                if (Valores[Px1,j]!=0 and j!=Py1):
+                    Py2=j
+                    for i in range(x):
+                        if i!=Px1:
+                            if (Valores[i,Py1]!=0 and Valores[i,Py2]!=0):
+                                    Nv=min(Valores[Px2,Py2],Valores[i,Py1])
+                                    Valores[Px1,Py1]=Nv
+                                    Valores[Px2,Py2]=Valores[Px2,Py2]-Nv
+                                    Valores[i,Py1]=Valores[i,Py1]-Nv
+                                    Valores[i,Py2]=Valores[i,Py2]+Nv
+        elif(F==1):
+            for i in range(x+1):
+                for j in range(y):
+                    if(PSombras[i,j]==P):
+                        Px1=i
+                        Py1=j
+                        Px2=i
+
+            for j in range(y):
+                if (Valores[Px1,j]!=0 and j!=Py1):
+                    Py2=j
+                    for i in range(x+1):
+                        if i!=Px1:
+                            if (Valores[i,Py1]!=0 and Valores[i,Py2]!=0):
+                                    Nv=min(Valores[Px2,Py2],Valores[i,Py1])
+                                    Valores[Px1,Py1]=Nv
+                                    Valores[Px2,Py2]=Valores[Px2,Py2]-Nv
+                                    Valores[i,Py1]=Valores[i,Py1]-Nv
+                                    Valores[i,Py2]=Valores[i,Py2]+Nv
+        else:
+            for i in range(x):
+                for j in range(y):
+                    if(PSombras[i,j]==P):
+                        Px1=i
+                        Py1=j
+                        Px2=i
+
+            for j in range(y):
+                if (Valores[Px1,j]!=0 and j!=Py1):
+                    Py2=j
+                    for i in range(x):
+                        if i!=Px1:
+                            if (Valores[i,Py1]!=0 and Valores[i,Py2]!=0):
+                                    Nv=min(Valores[Px2,Py2],Valores[i,Py1])
+                                    Valores[Px1,Py1]=Nv
+                                    Valores[Px2,Py2]=Valores[Px2,Py2]-Nv
+                                    Valores[i,Py1]=Valores[i,Py1]-Nv
+                                    Valores[i,Py2]=Valores[i,Py2]+Nv
         print("Nueva solución")
         print(Valores)
                         
