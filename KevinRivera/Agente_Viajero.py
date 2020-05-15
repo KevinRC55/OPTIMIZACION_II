@@ -1,3 +1,6 @@
+#No rompe ciclos
+
+
 import numpy as np
 import collections
 
