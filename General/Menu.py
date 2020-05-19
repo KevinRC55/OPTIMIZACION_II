@@ -11,12 +11,12 @@ def MenuPrincipal():
 			C: Asignación
 			D: Redes
 			E: Programación entera
-			Ctrl+d: Salir
+			Ctrl+c: Salir
 
                         Elija una opción: """)
 
     #os.system('clear')  # Linux
-    os.system('cls')   #Windows
+    #os.system('cls')   #Windows
 
     loop = True
 
@@ -60,7 +60,7 @@ def llamadoTransporte():
 
                                     Elija una opción: """)
     #os.system('clear') #Linux
-    os.system('cls')   #Windows
+    #os.system('cls')   #Windows
 
     if AlgoritmoTransporte == "A" or AlgoritmoTransporte == "a":
         print("\n")
@@ -86,7 +86,7 @@ def llamadoTransbordo():
 				    Elija una opción: """)
     
     #os.system('clear') #Linux
-    os.system('cls')   #Windows
+    #os.system('cls')   #Windows
 
 
     if AlgoritmoTransbordo == "A" or AlgoritmoTransbordo == "a":
@@ -119,7 +119,7 @@ def llamadoRedes():
 			      Elija una opción: """)
 	
     #os.system('clear') #Linux
-    os.system('cls')   #Windows
+    #os.system('cls')   #Windows
 
     if AlgoritmoRedes == "A" or AlgoritmoRedes == "a":
         os.system("python3 ArbolExpansionMinima.py")
@@ -151,7 +151,7 @@ def llamadoProgramacionEntera():
 				Elija una opción: """)
 	
     #os.system('clear') #Linux
-    os.system('cls')   #Windows
+    #os.system('cls')   #Windows
 
     if AlgoritmoEntero == "A" or AlgoritmoEntero == "a":
         os.system("python3 RamificacionAcotamiento.py")
