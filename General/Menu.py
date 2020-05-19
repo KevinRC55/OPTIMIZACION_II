@@ -1,51 +1,54 @@
-import  os
-import  sys
+import os
+import sys
+
 
 def MenuPrincipal():
-	print("************MENÚ PRINCIPAL**************")
+    print("************MENÚ PRINCIPAL**************")
 
-	Decision = input("""
-                           A: Transporte
-			   B: Transbordo
-			   C: Asignación
-			   D: Redes
-			   E: Programación entera
-			   Q: Salir
-                           
-                           Elija una opción: """)
-	
-	os.system('clear') #Linux
-	#os.system('cls')   #Windows
+    Decision = input("""
+                        A: Transporte
+			B: Transbordo
+			C: Asignación
+			D: Redes
+			E: Programación entera
+			Ctrl+d: Salir
 
+                        Elija una opción: """)
 
-	if Decision == "A" or Decision =="a":
+    os.system('clear')  # Linux
+    # os.system('cls')   #Windows
+
+    loop = True
+
+    while loop:
+        
+        if Decision == "A" or Decision == "a":
             llamadoTransporte()
             Submenu()
-
-	elif Decision == "B" or Decision =="b":
+        
+        elif Decision == "B" or Decision =="b":
             llamadoTransbordo()
             Submenu()
-
-	elif Decision == "C" or Decision =="c":
+        
+        elif Decision == "C" or Decision =="c":
             llamadoAsignacion()
             Submenu()
-	
-	elif Decision =="D" or Decision =="d":
+        
+        elif Decision =="D" or Decision =="d":
             llamadoRedes()
             Submenu()
-		
-	elif Decision =="E" or Decision == "e":
+        
+        elif Decision =="E" or Decision == "e":
             llamadoProgramacionEntera()
             Submenu()
+        
+        elif Decision == "Q" or Decision == "q":
+            break
 
-	elif Decision == "Q" or Decision == "q":
-            sys.exit
-
-	else:
+        else:
             print("Debes de seleccionar alguna de las opciones")
             print("Intenta de nuevo")
             MenuPrincipal()
-
 
 def llamadoTransporte():
     
@@ -57,7 +60,7 @@ def llamadoTransporte():
 
                                     Elija una opción: """)
     os.system('clear') #Linux
-    #os.system('cls')   #Windows
+    # os.system('cls')   #Windows
 
     if AlgoritmoTransporte == "A" or AlgoritmoTransporte == "a":
         print("\n")
@@ -83,7 +86,7 @@ def llamadoTransbordo():
 				    Elija una opción: """)
     
     os.system('clear') #Linux
-    #os.system('cls')   #Windows
+    # os.system('cls')   #Windows
 
 
     if AlgoritmoTransbordo == "A" or AlgoritmoTransbordo == "a":
@@ -116,7 +119,7 @@ def llamadoRedes():
 			      Elija una opción: """)
 	
     os.system('clear') #Linux
-    #os.system('cls')   #Windows
+    # os.system('cls')   #Windows
 
     if AlgoritmoRedes == "A" or AlgoritmoRedes == "a":
         os.system("python3 ArbolExpansionMinima.py")
@@ -127,10 +130,10 @@ def llamadoRedes():
     elif AlgoritmoRedes == "C" or AlgoritmoRedes == "c":
         os.system("python3 Floyd.py")
 		
-    elif AlgoritmoRedes == "D" or AlgortimoRedes == "d":
+    elif AlgoritmoRedes == "D" or AlgoritmoRedes == "d":
         os.system("python3 FlujoMaximo.py")
 		
-    elif AlgortimoRedes == "E" or AlgoritmoRedes == "e":
+    elif AlgoritmoRedes == "E" or AlgoritmoRedes == "e":
         os.system("python3 FlujoCostoMinimo.py")
 	
     elif AlgoritmoRedes == "F" or AlgoritmoRedes == "f":
@@ -148,7 +151,7 @@ def llamadoProgramacionEntera():
 				Elija una opción: """)
 	
     os.system('clear') #Linux
-    #os.system('cls')   #Windows
+    # os.system('cls')   #Windows
 
     if AlgoritmoEntero == "A" or AlgoritmoEntero == "a":
         os.system("python3 RamificacionAcotamiento.py")
@@ -166,22 +169,17 @@ def Submenu():
     Respuesta = input("""
 			 A: Regresar al menu principal
 			 B: Regresar al submenu
-			 C: Salir
 						 
 			Elija una opción: """)
     
     os.system('clear') #Linux
-    #os.system('cls')   #Windows
+    # os.system('cls')   #Windows
 
 
     if Respuesta == "A" or Respuesta == "a":
         MenuPrincipal()
-    
-    elif Respuesta == "B" or Respuesta == "b":
-        nombreFuncion
 
-    elif Respuesta == "C" or Respuesta == "c":
-        sys.exit
-	
+
 MenuPrincipal()
+
 
