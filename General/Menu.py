@@ -1,115 +1,179 @@
-print("************MENÚ PRINCIPAL**************")
+import os
 
-Decision = input("""
-                    A: Transporte
-                    B: Transbordo
-                    C: Asignación
-                    D: Redes
-                    E: Programación entera
+def MenuPrincipal():
+	print("************MENÚ PRINCIPAL**************")
 
-                    Elija una opción: """)
+	Decision = input("""
+                           A: Transporte
+			   B: Transbordo
+			   C: Asignación
+			   D: Redes
+			   E: Programación entera
+			   Q: Salir
+                           
+                           Elija una opción: """)
+	
+	os.system('clear') #Linux
+	#os.system('cls')   #Windows
 
-if Decision == "A" or Decision =="a":
-    print("Selecciona el método de Transporte  a implementar:")
-    AlgoritmoTransporte = input("""
+
+	if Decision == "A" or Decision =="a":
+		llamadoTransporte()
+
+	elif Decision == "B" or Decision =="b":
+		llamadoTransbordo()
+
+	elif Decision == "C" or Decision =="c":
+		llamadoAsignacion()
+	
+	elif Decision =="D" or Decision =="d":
+		llamadoRedes()
+		
+	elif Decision =="E" or Decision == "e":
+		llamadoProgramacionEntera()
+
+	elif Decision == "Q" or Decision == "q":
+		print("Saliendo")
+
+	else:
+		print("Debes de seleccionar alguna de las opciones")
+		print("Intenta de nuevo")
+
+
+def llamadoTransporte():
+    
+    print("\nSelecciona el método de Transporte  a implementar:")
+    AlgoritmoTransporte = input(""" 
                                     A: Esquina Noroeste
                                     B: Costo Mínimo
                                     C: Voguel
 
                                     Elija una opción: """)
+    os.system('clear') #Linux
+    #os.system('cls')   #Windows
+
     if AlgoritmoTransporte == "A" or AlgoritmoTransporte == "a":
-        Archivo1 = open("TransporteEsquinaNoroeste.py")
-        exec(Archivo1.read())
-    
+        print("\n")
+        os.system("python3 TransporteEsquinaNoroeste.py")    
+
     elif AlgoritmoTransporte == "B" or AlgoritmoTransporte == "b":
-        Archivo2 = open("TransporteCostoMinimo.py")
-        exec(Archivo2.read())
-    
+        print("\n")
+        os.system("python3 TransporteCostoMinimo.py")
+   
     elif AlgoritmoTransporte == "C" or AlgoritmoTransporte == "c":
-        Archivo3 = open("TransporteVogel.py")
-        exec(Archivo3.read())
+        print("\n")
+        os.system("python3 TransporteVogel.py")
 
 
-elif Decision == "B" or Decision =="b":
+def llamadoTransbordo():
+    
     print("Selecciona el método de Transbordo  a implementar:")
     AlgoritmoTransbordo = input("""
-                                    A: Esquina Noroeste
-                                    B: Costo Minimo
-                                    C: Voguel
+				    A: Esquina Noroeste
+				    B: Costo Minimo
+				    C: Voguel
 
-                                    Elija una opción: """)
+				    Elija una opción: """)
+    
+    os.system('clear') #Linux
+    #os.system('cls')   #Windows
+
+
     if AlgoritmoTransbordo == "A" or AlgoritmoTransbordo == "a":
-        Archivo4 = open("TransbordoEsquinaNoroeste.py")
-        exec(Archivo4.read())
+        os.system("python3 TransbordoEsquinaNoroeste.py")
     
     elif AlgoritmoTransbordo == "B" or AlgoritmoTransbordo == "b":
-        Archivo5 = open("TransbordoCostoMinimo.py")
-        exec(Archivo5.read())
-   
+        os.system("python3 TransbordoCostoMinimo.py")
+    
     elif AlgoritmoTransbordo == "C" or AlgoritmoTransbordo == "c":
-       Archivo6 = open("TransbordoVoguel.py")
-       exec(Archivo6.read())
+        os.system("python3 TransbordoVoguel.py")
+        
 
-elif Decision == "C" or Decision =="c":
-    print("Método Hungaro")
-    Archivo7 = open("Hungaro.py")
-    exec(Archivo7.read())
+def llamadoAsignacion():
+	
+	print("Método Hungaro")
+	os.system("python3 Hungaro.py")
 
-elif Decision =="D" or Decision =="d":
+        
+def llamadoRedes():
+    
     print("Selecciona el algoritmo de Redes a implementar:")
     AlgoritmoRedes = input(""" 
-                             A: Arbol de expansión mínima
-                             B: Dijkstra
-                             C: Floyd
-                             D: Flujo máximo
-                             E: Flujo a costo mínimo
-                             F: Flujo a costo mínimo cotas
+			      A: Arbol de expansión mínima
+			      B: Dijkstra
+			      C: Floyd
+			      D: Flujo máximo
+			      E: Flujo a costo mínimo
+			      F: Flujo a costo mínimo cotas
+								
+			      Elija una opción: """)
+	
+    os.system('clear') #Linux
+    #os.system('cls')   #Windows
 
-                             Elija una opción: """)
     if AlgoritmoRedes == "A" or AlgoritmoRedes == "a":
-        Archivo8 = open("ArbolExpansionMinima.py")
-        exec(Archivo8.read())
-
+        os.system("python3 ArbolExpansionMinima.py")
+	
     elif AlgoritmoRedes == "B" or AlgoritmoRedes == "b":
-        Archivo9 = open("Dijkstra.py")
-        exec(Archivo9.read())
-
+        os.system("python3 Dijkstra.py")
+		
     elif AlgoritmoRedes == "C" or AlgoritmoRedes == "c":
-        Archivo10 = open("Floyd.py")
-        exec(Archivo10.read())
-    
+        os.system("python3 Floyd.py")
+		
     elif AlgoritmoRedes == "D" or AlgortimoRedes == "d":
-        Archivo11 = open("FlujoMaximo.py")
-        exec(Archivo11.read())
-    
+        os.system("python3 FlujoMaximo.py")
+		
     elif AlgortimoRedes == "E" or AlgoritmoRedes == "e":
-        Archivo12 = open("FlujoCostoMinimo.py")
-        exec(Archivo12.read())
-    
+        os.system("python3 FlujoCostoMinimo.py")
+	
     elif AlgoritmoRedes == "F" or AlgoritmoRedes == "f":
-        Archivo13 = open("FlujoCostoMinimoCotas.py")
-        exec(Archivo13.read())
-
-elif Decision =="E" or Decision == "e":
+        os.system("python3 FlujoCostoMinimoCotas.py")
+	
+	
+def llamadoProgramacionEntera():
+    
     print("Selecciona el algoritmo de programación entera a usar:")
     AlgoritmoEntero = input(""" 
-                              A: Ramificación y acotamiento
-                              B: Enumeración implicita
-                              C: Agente viajero
+				A: Ramificación y acotamiento
+				B: Enumeración implicita
+				C: Agente viajero
 
-                              Elija una opción: """)
+				Elija una opción: """)
+	
+    os.system('clear') #Linux
+    #os.system('cls')   #Windows
+
     if AlgoritmoEntero == "A" or AlgoritmoEntero == "a":
-        Archivo14 = open("RamificacionAcotamiento.py")
-        exec(Archivo14.read())
+        os.system("python3 RamificacionAcotamiento.py")
+		
 
     elif AlgoritmoEntero == "B" or AlgoritmoEntero == "b":
-        Archivo15 = open("EnumeracionImplicita.py")
-        exec(Archivo15.read())
-    
+        os.system("python3 EnumeracionImplicita.py")
+			
     elif AlgoritmoEntero == "C" or AlgoritmoEntero == "c":
-        Archivo16 = open("AgenteViajero.py")
-        exec(Archivo16.read())
-else:
-    print("Debes de seleccionar alguna de las opciones")
-    print("Intenta de nuevo")
+        os.system("python3 AgenteViajero.py")		
+
+def Submenu():
+    
+    print("\n¿Qué desea hacer?")
+    Respuesta = input("""
+			 A: Regresar al menu principal
+			 B: Regresar al submenu
+			 C: Salir
+						 
+			Elija una opción: """)
+    
+    os.system('clear') #Linux
+    #os.system('cls')   #Windows
+
+
+    if Respuesta == "A" or Respuesta == "a":
+        pass
+    
+    elif Respuesta == "B" or Respuesta == "b":
+        pass
+    elif Respuesta == "C" or Respuesta == "c":
+        pass
+	
+MenuPrincipal()
 
