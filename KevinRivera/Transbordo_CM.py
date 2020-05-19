@@ -1,9 +1,10 @@
+#Solo asignacion por costo minimo
+
 #a[0] = Matriz de asignación
 #a[1] = Matriz de costos
 #a[2] = Auxiliar/Matriz de presios sombra
 #a[3] = Matriz identificadora de asignación
 #a[4] = Auxiliar
-
 import numpy as np
 
 frt = int(input("Inserte el numero de nodos de oferta: "))
@@ -138,78 +139,3 @@ for i in range(sizeof):
 
 print("Z= ",z,"\n")
 
-
-'''
-a[2] = a[3]
-
-
-#Vectores u y v
-u = np.zeros((sizeof, 1))
-v = np.zeros((1,sizede))
-ax1 = np.zeros((sizeof, 1))
-ax2 = np.zeros((1,sizede))
-ax1[0,0] = 1
-cntdr = 0
-stop1=0
-
-while (stop1 != 2):
-    while (ax1[:,0].any() > 0):
-        i,j = np.where(ax1==ax1.max())
-        ii,jj = i[0],j[0]
-        while (a[3][ii,:].any() > 0):
-            l = np.where(a[3][ii,:]>0)
-            ll = l[0][0]
-            v[0,ll] = a[1][ii][ll] - u[ii,0]
-            ax2[0,ll] = 1
-            a[3][ii,ll] = 0 
-        ax1[ii,0] = 0
-    
-    for j in range(sizede):
-        if(ax2[0,j]==0):
-            cntdr = cntdr+1
-        else:
-            cntdr = cntdr
-
-    print(cntdr)    
-
-    if(cntdr>0):
-        stop1 = stop1
-    else:
-        stop1 = stop1 + 1
-
-    print(stop1)
-
-    a[3] = a[2]
-
-    while (ax2[0,:].any() > 0):
-        i,j = np.where(ax2==ax2.max())
-        ii,jj = i[0],j[0]
-        while (a[3][:,jj].any() > 0):
-            k = np.where(a[3][:,jj] > 0)
-            kk = k[0][0]
-            u[kk,0] = a[1][kk][jj] - v[0,jj]
-            ax1[kk,0] = 1
-            a[3][kk,jj] = 0
-        ax2[0,jj] = 0
-    
-    for i in range(sizeof):
-        if(ax1[1,0]==0):
-            cntdr = cntdr+1
-        else:
-            cntdr = cntdr
-
-    print(cntdr)    
-
-    if(cntdr>0):
-        stop1 = stop1
-    else:
-        stop1 = stop1 + 1
-
-    print(stop1)
-
-    a[3] = a[2]
-
-print()
-print(u)
-print(v)
-'''
