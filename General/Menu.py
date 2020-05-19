@@ -1,4 +1,5 @@
-import os
+import  os
+import  sys
 
 def MenuPrincipal():
 	print("************MENÚ PRINCIPAL**************")
@@ -18,26 +19,32 @@ def MenuPrincipal():
 
 
 	if Decision == "A" or Decision =="a":
-		llamadoTransporte()
+            llamadoTransporte()
+            Submenu()
 
 	elif Decision == "B" or Decision =="b":
-		llamadoTransbordo()
+            llamadoTransbordo()
+            Submenu()
 
 	elif Decision == "C" or Decision =="c":
-		llamadoAsignacion()
+            llamadoAsignacion()
+            Submenu()
 	
 	elif Decision =="D" or Decision =="d":
-		llamadoRedes()
+            llamadoRedes()
+            Submenu()
 		
 	elif Decision =="E" or Decision == "e":
-		llamadoProgramacionEntera()
+            llamadoProgramacionEntera()
+            Submenu()
 
 	elif Decision == "Q" or Decision == "q":
-		print("Saliendo")
+            sys.exit
 
 	else:
-		print("Debes de seleccionar alguna de las opciones")
-		print("Intenta de nuevo")
+            print("Debes de seleccionar alguna de las opciones")
+            print("Intenta de nuevo")
+            MenuPrincipal()
 
 
 def llamadoTransporte():
@@ -168,12 +175,13 @@ def Submenu():
 
 
     if Respuesta == "A" or Respuesta == "a":
-        pass
+        MenuPrincipal()
     
     elif Respuesta == "B" or Respuesta == "b":
-        pass
+        nombreFuncion
+
     elif Respuesta == "C" or Respuesta == "c":
-        pass
+        sys.exit
 	
 MenuPrincipal()
 
