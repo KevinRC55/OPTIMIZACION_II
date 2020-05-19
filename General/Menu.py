@@ -15,8 +15,8 @@ def MenuPrincipal():
 
                         Elija una opción: """)
 
-    os.system('clear')  # Linux
-    # os.system('cls')   #Windows
+    #os.system('clear')  # Linux
+    os.system('cls')   #Windows
 
     loop = True
 
@@ -59,8 +59,8 @@ def llamadoTransporte():
                                     C: Voguel
 
                                     Elija una opción: """)
-    os.system('clear') #Linux
-    # os.system('cls')   #Windows
+    #os.system('clear') #Linux
+    os.system('cls')   #Windows
 
     if AlgoritmoTransporte == "A" or AlgoritmoTransporte == "a":
         print("\n")
@@ -85,8 +85,8 @@ def llamadoTransbordo():
 
 				    Elija una opción: """)
     
-    os.system('clear') #Linux
-    # os.system('cls')   #Windows
+    #os.system('clear') #Linux
+    os.system('cls')   #Windows
 
 
     if AlgoritmoTransbordo == "A" or AlgoritmoTransbordo == "a":
@@ -118,8 +118,8 @@ def llamadoRedes():
 								
 			      Elija una opción: """)
 	
-    os.system('clear') #Linux
-    # os.system('cls')   #Windows
+    #os.system('clear') #Linux
+    os.system('cls')   #Windows
 
     if AlgoritmoRedes == "A" or AlgoritmoRedes == "a":
         os.system("python3 ArbolExpansionMinima.py")
@@ -150,8 +150,8 @@ def llamadoProgramacionEntera():
 
 				Elija una opción: """)
 	
-    os.system('clear') #Linux
-    # os.system('cls')   #Windows
+    #os.system('clear') #Linux
+    os.system('cls')   #Windows
 
     if AlgoritmoEntero == "A" or AlgoritmoEntero == "a":
         os.system("python3 RamificacionAcotamiento.py")
@@ -172,8 +172,8 @@ def Submenu():
 						 
 			Elija una opción: """)
     
-    os.system('clear') #Linux
-    # os.system('cls')   #Windows
+    #os.system('clear') #Linux
+    os.system('cls')   #Windows
 
 
     if Respuesta == "A" or Respuesta == "a":
