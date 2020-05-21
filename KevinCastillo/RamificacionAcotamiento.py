@@ -33,7 +33,7 @@ def ProblemaMochila(n,C,Valores,Pesos):
 
 # Llamado a la funcion ProblemaMochila
 
-C = 70
+C = float(input('Ingresa el peso máximo:'))
 Pesos = [26,23,21,15,12,8]
 Valores = [10,9,8,8,7,6]
 n = len(Valores)
@@ -43,23 +43,22 @@ print("Z:",Z)
 
 
 '''
-En el siguiente árbol de recursión, K () se refiere 
-knapSack (). Los dos parámetros indicados en el
-Los siguientes árboles de recursión son ny W.
+En el siguiente árbol de recursión, M () se refiere 
+ProblemaMochila (). Los dos parámetros indicados en el
+Los siguientes árboles de recursión son n y  C.
 El árbol de recursión es para las siguientes entradas de muestra.
-wt [] = {1, 1, 1}, W = 2, val [] = {10, 20, 30}
-                       K (n, W)
-                       K (3, 2)  
+Pesos [] = {1, 1, 1}, C = 2, Valores [] = {10, 20, 30}
+                       M (n, C)
+                        (3, 2)  
                    / \ 
                  / \               
-            K (2, 2) K (2, 1)
+            M (2, 2) M (2, 1)
           / \ / \ 
         / \ / \
-       K (1, 2) K (1, 1) K (1, 1) K (1, 0)
+       M (1, 2) M (1, 1) M (1, 1) M (1, 0)
        / \ / \ / \
      / \ / \ / \
-K (0, 2) K (0, 1) K (0, 1) K (0, 0) K (0, 1) K (0, 0)
-Árbol de recursión para mochila Capacidad 2 
-unidades y 3 artículos de 1 unidad de peso.
+M (0, 2) M (0, 1) M(0, 1) M(0, 0) M(0, 1) M(0, 0)
+Árbol de recursión
 '''
 
