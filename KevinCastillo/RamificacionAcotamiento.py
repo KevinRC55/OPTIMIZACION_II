@@ -7,8 +7,10 @@
 # n: número de variables
 
 def ProblemaMochila(PesoMaximo, PesoElemento, Coeficientes, n): 
-    
-    Mochila = [[0 for PesoMaximo in range(PesoMaximo + 1)] 
+    # Ya que el problema es de maximización, se empieza inicializando
+    # las variables en 1, asi se generarán  bloques de 1's y 0's con todas las combinaciones
+
+    Mochila = [[1 for PesoMaximo in range(PesoMaximo + 1)] 
             for i in range(n + 1)] 
               
     for i in range(n + 1): 
