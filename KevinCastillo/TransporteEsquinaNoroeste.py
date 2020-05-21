@@ -191,11 +191,8 @@ def obtener_costo_total(costos, solucion):
 
 
 
-#costos = [[5,8,6,6,3],
-#         [4,7,7,6,5],
-#         [8,4,6,6,4]]
-#oferta = [8,5,9]
-#demanda = [4,4,5,4,8]
+# Llamado a la funcion general
+
 oferta = [float(x) for x in input('Introduce  las ofertas separadas por una coma: ').split(',')]
 demanda = [float(y) for y in input('Introduce las demandas separadas por una coma: ').split(',')]
 
