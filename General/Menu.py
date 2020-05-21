@@ -11,7 +11,7 @@ def MenuPrincipal():
 			C: Asignación
 			D: Redes
 			E: Programación entera
-			Ctrl+c: Salir
+			ctrl + d: Salir
 
                         Elija una opción: """)
 
@@ -77,26 +77,9 @@ def llamadoTransporte():
 
 def llamadoTransbordo():
     
-    print("Selecciona el método de Transbordo  a implementar:")
-    AlgoritmoTransbordo = input("""
-				    A: Esquina Noroeste
-				    B: Costo Minimo
-				    C: Voguel
-
-				    Elija una opción: """)
+    print("Método Costo mínimo ")
+    os.system("python3 TransbordoCostoMinimo.py")
     
-    #os.system('clear') #Linux
-    #os.system('cls')   #Windows
-
-
-    if AlgoritmoTransbordo == "A" or AlgoritmoTransbordo == "a":
-        os.system("python3 TransbordoEsquinaNoroeste.py")
-    
-    elif AlgoritmoTransbordo == "B" or AlgoritmoTransbordo == "b":
-        os.system("python3 TransbordoCostoMinimo.py")
-    
-    elif AlgoritmoTransbordo == "C" or AlgoritmoTransbordo == "c":
-        os.system("python3 TransbordoVoguel.py")
         
 
 def llamadoAsignacion():
@@ -113,8 +96,6 @@ def llamadoRedes():
 			      B: Dijkstra
 			      C: Floyd
 			      D: Flujo máximo
-			      E: Flujo a costo mínimo
-			      F: Flujo a costo mínimo cotas
 								
 			      Elija una opción: """)
 	
@@ -133,20 +114,13 @@ def llamadoRedes():
     elif AlgoritmoRedes == "D" or AlgoritmoRedes == "d":
         os.system("python3 FlujoMaximo.py")
 		
-    elif AlgoritmoRedes == "E" or AlgoritmoRedes == "e":
-        os.system("python3 FlujoCostoMinimo.py")
-	
-    elif AlgoritmoRedes == "F" or AlgoritmoRedes == "f":
-        os.system("python3 FlujoCostoMinimoCotas.py")
-	
 	
 def llamadoProgramacionEntera():
     
     print("Selecciona el algoritmo de programación entera a usar:")
     AlgoritmoEntero = input(""" 
 				A: Ramificación y acotamiento
-				B: Enumeración implicita
-				C: Agente viajero
+				B: Agente viajero
 
 				Elija una opción: """)
 	
@@ -158,9 +132,6 @@ def llamadoProgramacionEntera():
 		
 
     elif AlgoritmoEntero == "B" or AlgoritmoEntero == "b":
-        os.system("python3 EnumeracionImplicita.py")
-			
-    elif AlgoritmoEntero == "C" or AlgoritmoEntero == "c":
         os.system("python3 AgenteViajero.py")		
 
 def Submenu():
@@ -172,8 +143,8 @@ def Submenu():
 						 
 			Elija una opción: """)
     
-    #os.system('clear') #Linux
-    os.system('cls')   #Windows
+    os.system('clear') #Linux
+    #os.system('cls')   #Windows
 
 
     if Respuesta == "A" or Respuesta == "a":
