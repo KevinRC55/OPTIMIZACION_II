@@ -32,10 +32,11 @@ def ProblemaMochila(n,C,Valores,Pesos):
 
 
 # Llamado a la funcion ProblemaMochila
-
+print('Introduce los coeficientes de la funcion objetivo, separados por una coma:\n')
+Valores = [float(x) for x in input().split(',')]
+print('Introduce los pesos, separados por una coma:\n')
+Pesos = [float(y) for y in input().split(',')]
 C = float(input('Ingresa el peso máximo:'))
-Pesos = [26,23,21,15,12,8]
-Valores = [10,9,8,8,7,6]
 n = len(Valores)
 
 Z =  ProblemaMochila(n,C,Valores,Pesos)
