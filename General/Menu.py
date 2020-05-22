@@ -96,6 +96,7 @@ def llamadoRedes():
 			      B: Dijkstra
 			      C: Floyd
 			      D: Flujo máximo
+                              E: Flujo a costo mínimo
 								
 			      Elija una opción: """)
 	
@@ -113,7 +114,9 @@ def llamadoRedes():
 		
     elif AlgoritmoRedes == "D" or AlgoritmoRedes == "d":
         os.system("python3 FlujoMaximo.py")
-		
+
+    elif AlgoritmoRedes == "E" or AlgoritmoRedes == "e":
+        os.system("python3 FlujoCostoMinimo.py")
 	
 def llamadoProgramacionEntera():
     
