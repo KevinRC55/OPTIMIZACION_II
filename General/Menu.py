@@ -131,7 +131,7 @@ def llamadoProgramacionEntera():
     #os.system('cls')   #Windows
 
     if AlgoritmoEntero == "A" or AlgoritmoEntero == "a":
-        os.system("python3 RamificacionAcotamiento.py")
+        os.system("python3 RamificacioA.py")
 		
 
     elif AlgoritmoEntero == "B" or AlgoritmoEntero == "b":
