@@ -192,8 +192,8 @@ def obtener_costo_total(costos, solucion):
 oferta = [float(x) for x in input('Introduce  las ofertas separadas por una coma: ').split(',')]
 demanda = [float(y) for y in input('Introduce las demandas separadas por una coma: ').split(',')]
 
-filas = int(input("Numero de filas:"))
-columnas = int(input("Numero de columnas:"))
+filas = len(oferta)
+columnas = len(demanda)
 costos=[]
 for i in range(1, filas+1):
      costos.append(list(map(lambda j: float(input('valor:')), [ j for j in range(columnas)] )))
